@@ -12,7 +12,7 @@ services:
     environment:
       - NODE_ENV=prod
       - MONGO_PORT=${MONGO_PORT}
-      - MONGO_USERNAME=${MONGO_USERNAME
+      - MONGO_USERNAME=${MONGO_USERNAME}
       - MONGO_PASSWORD=${MONGO_PASSWORD}
       - MONGO_IP=${MONGO_IP}
       - REDIS_URL=${REDIS_URL}
