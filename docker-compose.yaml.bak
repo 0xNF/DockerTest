@@ -1,0 +1,14 @@
+version: "3"
+services:
+  node-app:
+    build:
+      tags:
+        - "node1"
+      context: ./
+    ports: [ "3000:3000" ]
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    env_file: .env
+
+
