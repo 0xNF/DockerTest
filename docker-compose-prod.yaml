@@ -11,11 +11,16 @@ services:
         - NODE_ENV=prod
     environment:
       - NODE_ENV=prod
-      - MONGO_PORT=27017
-      - MONGO_USERNAME=abracadabra
-      - MONGO_PASSWORD=allakhazam
-      - MONGO_IP=mongo
-      - REDIS_URL=redis
-      - REDIS_PORT=6379
-      - SESSION_SECRET=secret
+      - MONGO_PORT=${MONGO_PORT}
+      - MONGO_USERNAME=${MONGO_USERNAME
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_IP=${MONGO_IP}
+      - REDIS_URL=${REDIS_URL}
+      - REDIS_PORT=${REDIS_PORT}
+      - SESSION_SECRET=${SESSION_SECRET}
     command: node index.js
+
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
